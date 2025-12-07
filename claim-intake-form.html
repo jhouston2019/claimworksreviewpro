@@ -1444,6 +1444,8 @@
 
             <input type="hidden" name="_captcha" value="false">
 
+            <input type="hidden" name="_next" value="thank-you.html">
+
         </form>
 
     </div>
@@ -1691,6 +1693,20 @@
             updateFileList();
 
             document.querySelectorAll('.checked').forEach(el => el.classList.remove('checked'));
+
+        });
+
+    </script>
+
+    <script>
+
+        document.getElementById('intakeForm').addEventListener('submit', function() {
+
+            setTimeout(function() {
+
+                window.location.href = "thank-you.html";
+
+            }, 500);
 
         });
 
